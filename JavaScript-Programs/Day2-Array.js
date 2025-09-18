@@ -1,120 +1,182 @@
 //ARRAY METHODS
-//INDEX STARTS FROM 0
-//LENGTH STARTS FROM 1
 
-var arr = [1, 2, "javascript" , true , [10, 20]]
-    console.log(arr[2])
-    console.log(arr[4])
-    console.log(arr[2].length)  //PROPERTY
-    console.log(arr[3].length)
+// var arr = [10, 20, 'javascript' , true, [100, 200, 'playwright']]   //Declare
+
+// //ACCESS USING INDEX, STARTS FROM 0. 
+
+// console.log(arr.length-1)
+
+// console.log( arr[2][0]  )    //TWO DYMANSION ARRAY
+
+// console.log( arr[4][2][3]  )    //MULTI DYMANSION ARRAY
+
 
 //PUSH
 var arr = [10, 20, 30, 40, 50]
-arr.push(60, "satya" , true)
+
+arr.push(60, 'tej')
 console.log(arr)
+
 
 //POP
 arr.pop()
 console.log(arr)
 
-//SHIFT
+
+
+var arr = [10, 20, 30, 40]
+
+//SHIT
 arr.shift()
 console.log(arr)
 
+
 //UNSHIFT
-arr.unshift(10)
+arr.unshift(100, 'play')
 console.log(arr)
 
-//[ 10|20|30|40|50 ]  - heap(Non -primitive)
-//"10,20,30,40,50"| - stack (primitive)
 
-//TO-STRING
-arr = [1, 2, 3, 4, 5]
+//TO STRING
+var arr = [100, 200, 300, 400, 500]
+
 var store = arr.toString()
-console.log(store)
+console.log(typeof store)
+
+////EXAMPLE STRING
+// var str = '100,200,300'
+// console.log(str)
 
 
 //CONCAT
 let arr1 = [1, 2, 3]
 let arr2 = [4, 5, 6]
 let arr3 = [7, 8, 9]
-console.log(arr1.concat(arr2 , arr3)) //[1,2,3, 4,5,6,7,8,9]
-console.log(arr2.concat(arr1 , arr3))
+
+console.log(arr1 , arr2, arr3)  //PROVIDE SEPERATE VALUES
+
+console.log(arr1 + arr2 + arr3)  //IT WILL MERGE THE VALUES BUT, STRING TYPE
+
+console.log(arr2.concat(arr3 , arr1))   // IT WILL ADD THE VALUES WHICH REFERANCE WE DECLARE
 
 
-//SLICE - based on starting index between end length(ending index +1)
-//We can slice an array between same an array values
-arr = [1,2,3,4,5,6,7,8,9]
-console.log(arr.slice(2 , 5))
-console.log(arr.slice(6 , 9))
+
+//SLICE - BASED ON STARTING INDEX BETWEEN ENDING INDEX +1
+
+var arr = ['apple' , 'orange' , 'cherry' , 'pine-apple' , 'grapes', 'banana', 'strawberry', 'carrot']
+
+var str = arr.slice(2 , 5)
+console.log(str)
 
 
-//MAP 
-arr = [4, 9, 16, 25]  //2, 3, 4, 5
-var store = arr.map(Math.sqrt)
-console.log(store)
 
-var store = arr.map((b)=> b > 5)
-console.log(store)
+//SPLICE - BASED ON STARTING INDEX , DELETE-COUNT-NUMBERS, ...VALUES
 
-//FILTER
-arr = [1, 2, 3, 4, 5, 6]
-store = arr.filter((num )=> num % 2 == 0)  
-console.log(store)
-
-
-//SPLICE - Based on starting index , countofdigits, ...values
-//Remove
-arr = [10, 20, 30, 40, 50, 60, 70]
-arr.splice(2 , 3)
+var arr = [100, 200, 300, 400, 500, 600, 700]
+//REMOVE
+arr.splice(2 , 4)    //index, deleteCount
 console.log(arr)
 
-//Update - replace
-arr.splice(0 , 4 , 1, 2, 6, 7)  
+//REPLACE
+arr.splice(1, 2, 30, 40, 50)
 console.log(arr)
 
-//Insert - add
-arr.splice(3, 0, 8, 9)
-console.log(arr)
-
-//Example
-arr = [1, 2, 6, 7, 8]
-arr.splice(2, 0, 3, 4,5)
+//INSERT
+arr.splice(1, 0, 60, 70, 80, 90)
 console.log(arr)
 
 
-//REDUCE
-arr = [1, 2, 3, 4]  //10+20+30+40=100
-store = arr.reduce((n1, n2)=> n1 * n2 )
-//n1(10) + n2(20) = 30
-//n1(30) + n2(30) = 60
-//n1(60) + n2(40) = 100
-console.log(store)
+//MAP - TRANSFERMATOR
+var arr = [4, 9, 16, 25, 36 , 786.123]
+
+var str = arr.map(Math.sqrt)
+console.log(str)
+
+str = arr.map(function(a){
+    return a <= 13
+})
+console.log(str)
+
+
+//FILTER - 
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+str = arr.filter(function(a){    // MODULUS = REMINDER
+    return a%2==0
+})         
+console.log(str)
+
+
+
+//REDUCE -
+
+var arr = [ 10, 20, 30, 40, 50 , 60]
+
+str = arr.reduce(function (num1 , num2, num3 , num4){
+    return num1 + num2 //+ num3   + num4
+})
+//num1 10 + num2 20 = 30
+//num1 30 + num2 30 = 60
+//num1 60 + num2 40 = 100
+//num1 100 + num2 50 = 150
+console.log(str)
+
+
+
 
 //VALUES
-arr = [10, 20, 30, 40, 50]
-store = arr.values()
-for (let element of store) {
+var arr = ["apple", "orange", "banana", "strawberry"]
+
+str = arr.values()
+
+for (const element of str) {
     console.log(element)
 }
 
+
+
 //FOR-EACH
-arr = ["apple" , "orange" , "pine"]
-arr.forEach((friuts)=> 
-    console.log(friuts))
+var arr = [10, 20, 30, 40, 50]
+
+arr.forEach(function(num){
+    console.log(num)
+})
+
+
 
 //REVERSE
-arr = [1, 2, 3, 4, 5]
-console.log(arr.reverse())
+var arr = [10, 20, "javascript" , "playwright" , true]
+console.log( arr.reverse() )
 
-arr = [10, 20, 30, 40]  //10+20+30+40=100
-store = arr.reduce((n1, n2)=> n1 * n2, 2  )
-//n1(10) + n2(20) = 30
-//n1(30) + n2(30) = 60
-//n1(60) + n2(40) = 100
-console.log(store)
 
 //JOIN
-arr = ['JavaScript' , 'Playwright' , 'Java' , 'Selenium']
-store = arr.join('<-->')
-console.log(store)
+
+var arr = [10, 20, 30, 40]
+
+console.log(arr.join(' @#$%^&*() '))
+
+
+//REVERSE the STRING
+var ab = "javascript"     
+console.log( ab.split('').reverse().join(''))
+
+
+//SORT
+//ASCENDING ORDER
+var arr = [11, 2, 65, 96, 23, 1, 7, 46]
+
+arr.sort((a , b) =>{
+    return a - b
+})
+
+console.log(arr)
+
+
+//DESCENDING ORDER
+arr.sort((a , b) =>{
+    return b - a
+})
+console.log(arr)
+
+
+
+
