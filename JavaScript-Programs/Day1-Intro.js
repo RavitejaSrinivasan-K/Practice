@@ -54,7 +54,7 @@ console.log(c)
 
 
 //DATA TYPES
-//PRIMITIVE  - NUMBER , STRING , BOOLEAN , UNDEFINED , NULL , NAN
+//PRIMITIVE - STACK MEMORY - NUMBER , STRING , BOOLEAN , UNDEFINED , NULL , NAN
 let num = 786
 console.log(typeof num)
 
@@ -78,7 +78,7 @@ console.log("five"/ 10 )
 
 
 
-//NON - PRIMITIVE - ARRAY , OBJECT , FUNCTION
+//NON - PRIMITIVE - HEAP MEMORY - ARRAY , OBJECT , FUNCTION
 let arr = [1, 2, 3]
 console.log(typeof arr)
 
