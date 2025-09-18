@@ -16,7 +16,7 @@ console.log('EVENING')
 //ERROR HANDLING
 //BOUNDARY CRETERIA : MIN=18 
 try{
-    let age = 'WERTY#$%^&*'
+    let age = '23'
      if(age == ''){
         throw("Dont skip")
     }
@@ -46,7 +46,7 @@ async function data(){
         }, 2000)
     })
 }
-
+//It will throw the pending promise which is default one.
 // console.log(data())
 
 
