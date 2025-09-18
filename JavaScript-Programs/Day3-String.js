@@ -1,85 +1,131 @@
-//STRING METHODS
+//STRING
 
-var str0 = ["Javascript Programming" , "java Program", [1, 2, 3], [4, 5, 6] , [7,8,9]]
-console.log(str0[0][11])  //Index - Multi Dymantion Array
+// var str = 'javascript programming'
+// console.log(str.length-1)
+
+// console.log( str[2] )
 
 
-//SLICE -based index between ending +1 (or) length
+//SLICE - Based on starting index between ending index +1
+var str = 'javascript programming'
 
-var str = "Javascript Program Language"
-console.log(str.slice(11, 18 ))
-console.log(str.slice(-27 , -17 ))
-console.log(str.length)
+var s = str.slice(0, 9)
+console.log(s)
 
-//SUBSTRING
-str = "Javascript Program Language"
-console.log(str.substring(19 , 27))
+var s = str.slice(-22, -11)
+console.log(s)
+
+var s = str.slice(11, 22)
+console.log(s)
+
+
+//SUB STRING
+var str = 'javascript programming'
+
+s = str.substring(0, 10)
+console.log(s)
+
+// var s = str.substring(-22, -11)   //Negative values not allowed 
+// console.log(s)
+
+
+
+
+//REPLACE
+var str = 'javascript programming'
+
+s = str.replace('javascript' ,  'java' )
+console.log(s)
+
+
+//REPLACE ALL
+s = str.replaceAll('a' , '@')
+console.log(s)
+
+
+
+//UPPER CASE
+var str = 'javascript programming'
+console.log(  str.toUpperCase() )
+
+
+//LOWER CASE
+var str = 'JAVASCRIPT PROGRAMMING'
+console.log(  str.toLowerCase() )
 
 
 //CONCAT
-let str1 = "JavaScript"
-let str2 = "Program"
-let str3 = "Language"
+let str1 = 'javascript '
+let str2 = 'programming '
+let str3 = 'language'
+
+console.log(str1, str2, str3)
+
+console.log(str1 + str2 + str3)
 
 console.log(str1.concat(str2 , str3))
 
 
-//UPPERCASE 
-str = "javascript programming"
-console.log(str.toUpperCase())
-
-//LOWER CASE
-str = "JAVASCRIPT PROGRAMMING"
-console.log(str.toLowerCase())
-
-
-//REPLACE
-str = "JavaScript programming language"
-console.log(str.replace('a' , '$'))
-
-//REPLACE ALL
-console.log(str.replaceAll('JavaScript' , "*"))
-
-
 //TRIM
-str = "   Javascript   Program   "
+str = '   javascript   with   playwright   '
 console.log(str.trim())
 console.log(str.trimEnd())
 console.log(str.trimStart())
 
 
-//CHAR AT
-str = "Javascript Program"
-console.log(str.charAt(2))
+
+//INCLUDES
+var str = 'javascript programming'
+
+console.log(  str.includes('zho')  )
+
+//STARTS WITH
+console.log(  str.startsWith('j')  )
+
+//ENDS WITH
+console.log(  str.endsWith('g')  )
 
 
-//INDEX of
-str = "Javascript Program"
-console.log(str.indexOf('P'))
 
+//INDEX OF
+
+var str = 'javascript program'
+
+console.log(  str.indexOf('a') )
 
 //LAST INDEX OF
-str = "Javascript Program"
-console.log(str.indexOf('a'))
-console.log(str.lastIndexOf('a'))
+console.log(  str.lastIndexOf('a') )
 
 
-//SPREAD AND REST (...) it is not a method
-str = "Javascript"
-console.log(...str)
+//SEARCH
+var str = 'javascript programming language'
 
+console.log(  str.search('a')  )
+
+
+//CHAR AT
+console.log(  str.charAt(9) )
+
+
+
+//SPLIT
+var str = 'javascript p,l,a,y,w,r,i,g,h,t'
+
+console.log(str.split(','))
+
+
+str = 'raviteja@gmail.com'
+
+console.log( str.split('a') )
+
+
+//REPEAT
+var str = ' Crypto '
+
+console.log( str.repeat(9) )
 
 //REST
-var arr = [1, 2, 3, 4, 5, 6]
-var [x, y, z , ...abc] = arr
-console.log(x)
-console.log(abc)
+var str = ' JavaScript '
 
+console.log(...str)
 
-//REVERSE
-var arr = ["javascript" , "gang" , 23]
-console.log(arr.reverse())
-
-str = "Javscript Programing"
-var s = str.split('').reverse().join("")
-console.log(s)
